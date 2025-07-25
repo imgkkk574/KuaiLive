@@ -1,5 +1,5 @@
 ---
-title: "KuaiComt"
+title: "KuaiLive"
 layout: default
 sitemap: false
 permalink: /detailed_statistics.html
