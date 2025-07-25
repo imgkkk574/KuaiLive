@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>KuaiComt | A Joint Video and Comment Recommendation Dataset</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="KuaiComt" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A Joint Video and Comment Recommendation Dataset" />
+<meta property="og:description" content="A Joint Video and Comment Recommendation Dataset" />
+<link rel="canonical" href="http://localhost:4000/detailed_statistics.html" />
+<meta property="og:url" content="http://localhost:4000/detailed_statistics.html" />
+<meta property="og:site_name" content="KuaiComt" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="KuaiComt" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"A Joint Video and Comment Recommendation Dataset","headline":"KuaiComt","url":"http://localhost:4000/detailed_statistics.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=HEAD">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">KuaiComt</h1>
+      <h2 class="project-tagline">A Joint Video and Comment Recommendation Dataset</h2>
+      
+        <a href="https://github.com/imgkkk574/KuaiLive" class="btn">View on GitHub</a>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <p><a href="./">HOMEPAGE</a></p>
+
+<h2 id="data-descriptions">Data Descriptions:</h2>
+
+<p>File organization:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  KuaiComt
+  ├── user_video_inter.csv          
+  ├── user_comment_inter.csv
+  ├── user_features.csv
+  ├── video_features.csv
+  └── comment_features.csv
+</code></pre></div></div>
+
+<h4 id="1-descriptions-of-the-fields-in-user_video_intercsv">1. Descriptions of the fields in user_video_inter.csv</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>user_id</td>
+      <td>The ID of the user.</td>
+      <td>int64</td>
+      <td>2924305332</td>
+    </tr>
+    <tr>
+      <td>video_id</td>
+      <td>The ID of the viewed video.</td>
+      <td>int64</td>
+      <td>110378652104</td>
+    </tr>
+    <tr>
+      <td>p_hourmin</td>
+      <td>The time of this interaction (format: HHSS).</td>
+      <td>int64</td>
+      <td>1500</td>
+    </tr>
+    <tr>
+      <td>time_ms</td>
+      <td>Unix timestamp (millisecond).</td>
+      <td>float64</td>
+      <td>1696141175214</td>
+    </tr>
+    <tr>
+      <td>is_click</td>
+      <td>Whether the user clicks the video.</td>
+      <td>int64</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>is_like</td>
+      <td>Whether the user likes the video.</td>
+      <td>int64</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>is_follow</td>
+      <td>Whether the user follows the author of the video.</td>
+      <td>int64</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>is_comment</td>
+      <td>Whether the user comments the video.</td>
+      <td>int64</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>is_forward</td>
+      <td>Whether the user forwards the video.</td>
+      <td>int64</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>is_collect</td>
+      <td>Whether the user collects the video.</td>
+      <td>int64</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>is_hate</td>
+      <td>Whether the user hates the video.</td>
+      <td>int64</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>long_view</td>
+      <td>A binary feedback signal. It equals 1 when: <code class="language-plaintext highlighter-rouge">play_time_ms &gt;= duration_ms if duration_ms &lt;= 18,000 ms</code>, or <code class="language-plaintext highlighter-rouge">play_time_ms &gt;=18,000 ms if duration_ms &gt; 18,000 ms</code>.</td>
+      <td>int64</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>play_time_ms</td>
+      <td>The duration this video(item) has been played by this user (millisecond).</td>
+      <td>float64</td>
+      <td>5822</td>
+    </tr>
+    <tr>
+      <td>duration_ms</td>
+      <td>The total duration of this video (millisecond).</td>
+      <td>float64</td>
+      <td>19960</td>
+    </tr>
+    <tr>
+      <td>profile_stay_time</td>
+      <td>The time that the user stayed in this author’s profile.</td>
+      <td>int64</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>comment_stay_time</td>
+      <td>The time that the user stayed in the comments section of this video</td>
+      <td>int64</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="2-descriptions-of-the-fields-in-user_comment_intercsv">2. Descriptions of the fields in user_comment_inter.csv</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>user_id</td>
+      <td>The ID of the user.</td>
+      <td>int64</td>
+      <td>358692597</td>
+    </tr>
+    <tr>
+      <td>comment_id</td>
+      <td>The ID of the comment.</td>
+      <td>int64</td>
+      <td>455709716918</td>
+    </tr>
+    <tr>
+      <td>time_stamp</td>
+      <td>Unix timestamp (second).</td>
+      <td>int64</td>
+      <td>1696421927</td>
+    </tr>
+    <tr>
+      <td>photo_id</td>
+      <td>The ID of the video.</td>
+      <td>int64</td>
+      <td>65137995197</td>
+    </tr>
+    <tr>
+      <td>is_like</td>
+      <td>Whether the user likes the comment.</td>
+      <td>int64</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>is_reply</td>
+      <td>Whether the user replies to the comment.</td>
+      <td>int64</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="3-descriptions-of-the-fields-in-user_featurescsv">3. Descriptions of the fields in user_features.csv</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>user_id</td>
+      <td>The ID of the user.</td>
+      <td>int64</td>
+      <td>1905604649</td>
+    </tr>
+    <tr>
+      <td>user_active_degree</td>
+      <td>In the set of {‘high_active’, ‘full_active’, ‘middle_active’, ‘UNKNOWN’}.</td>
+      <td>str</td>
+      <td>“high_active”</td>
+    </tr>
+    <tr>
+      <td>is_live_author</td>
+      <td>Is this user a live author？</td>
+      <td>int64</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>produce_video_num</td>
+      <td>The number of produced videos by this user.</td>
+      <td>int64</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>follow_count</td>
+      <td>The number of users that this user follows.</td>
+      <td>int64</td>
+      <td>274</td>
+    </tr>
+    <tr>
+      <td>follow_user_num_range</td>
+      <td>The range of the number of users that this user follows. In the set of {‘0’, ‘(0,10]’, ‘(10,50]’, ‘(100,150]’, ‘(150,250]’, ‘(250,500]’, ‘(50,100]’, ‘500+’}</td>
+      <td>str</td>
+      <td>“(250,500]”</td>
+    </tr>
+    <tr>
+      <td>fans_count</td>
+      <td>The number of the fans of this user.</td>
+      <td>int64</td>
+      <td>676</td>
+    </tr>
+    <tr>
+      <td>fans_user_num_range</td>
+      <td>The range of the number of fans of this user. In the set of {‘0’, ‘[1,10)’, ‘[10,100)’, ‘[100,1k)’, ‘[1k,5k)’, ‘[5k,1w)’, ‘[1w,10w)’}</td>
+      <td>str</td>
+      <td>“[100,1k)”</td>
+    </tr>
+    <tr>
+      <td>friend_user_num_range</td>
+      <td>The range of the number of friends that this user has. In the set of {‘0’, ‘[1,5)’, ‘[5,30)’, ‘[30,60)’, ‘[60,120)’, ‘[120,250)’, ‘250+’}</td>
+      <td>str</td>
+      <td>“250+”</td>
+    </tr>
+    <tr>
+      <td>register_days</td>
+      <td>The days since this user has registered.</td>
+      <td>int64</td>
+      <td>1252</td>
+    </tr>
+    <tr>
+      <td>onehot_feat0</td>
+      <td>An encrypted feature of the user. Each value indicates the position of “1” in the one-hot vector. Range: {0,1}</td>
+      <td>int64</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>onehot_feat1</td>
+      <td>An encrypted feature. Range: {0, 1, …, 6}</td>
+      <td>int64</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>onehot_feat2</td>
+      <td>An encrypted feature. Range: {0, 1, …, 54}</td>
+      <td>int64</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>onehot_feat3</td>
+      <td>An encrypted feature. Range: {0, 1, …, 1685}</td>
+      <td>int64</td>
+      <td>898</td>
+    </tr>
+    <tr>
+      <td>onehot_feat4</td>
+      <td>An encrypted feature. Range: {0, 1, …, 5}</td>
+      <td>int64</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>onehot_feat5</td>
+      <td>An encrypted feature. Range: {0, 1, …, 9}</td>
+      <td>int64</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>onehot_feat6</td>
+      <td>An encrypted feature. Range: {0, 1, 2}</td>
+      <td>int64</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>onehot_feat7</td>
+      <td>An encrypted feature. Range: {0, 1, …, 52}</td>
+      <td>int64</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td>onehot_feat8</td>
+      <td>An encrypted feature. Range: {0, 1, …, 391}</td>
+      <td>int64</td>
+      <td>153</td>
+    </tr>
+    <tr>
+      <td>onehot_feat9</td>
+      <td>An encrypted feature. Range: {0, 1, …, 6}</td>
+      <td>int64</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>onehot_feat10</td>
+      <td>An encrypted feature. Range: {0, 1, …, 4}</td>
+      <td>int64</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>onehot_feat11</td>
+      <td>An encrypted feature. Range: {0, 1, …, 6}</td>
+      <td>int64</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>onehot_feat12</td>
+      <td>An encrypted feature. Range: {0, 1}</td>
+      <td>int64</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>onehot_feat13</td>
+      <td>An encrypted feature. Range: {0, 1}</td>
+      <td>int64</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>onehot_feat14</td>
+      <td>An encrypted feature. Range: {0, 1}</td>
+      <td>int64</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>onehot_feat15</td>
+      <td>An encrypted feature. Range: {0, 1}</td>
+      <td>int64</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>onehot_feat16</td>
+      <td>An encrypted feature. Range: {0, 1}</td>
+      <td>int64</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>onehot_feat17</td>
+      <td>An encrypted feature. Range: {0, 1}</td>
+      <td>int64</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>onehot_feat18</td>
+      <td>An encrypted feature. Range: {0, 1}</td>
+      <td>int64</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>onehot_feat19</td>
+      <td>An encrypted feature. Range: {0, 1}</td>
+      <td>int64</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>onehot_feat20</td>
+      <td>An encrypted feature. Range: {0, 1, …, 4}</td>
+      <td>int64</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="4-descriptions-of-the-fields-in-video_featurescsv">4. Descriptions of the fields in video_features.csv</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>video_id</td>
+      <td>The ID of the video.</td>
+      <td>int64</td>
+      <td>107291063430</td>
+    </tr>
+    <tr>
+      <td>author_id</td>
+      <td>The ID of the author of this video.</td>
+      <td>int64</td>
+      <td>3087318004</td>
+    </tr>
+    <tr>
+      <td>video_type</td>
+      <td>Type of this video (NORMAL or AD).</td>
+      <td>str</td>
+      <td>“NORMAL”</td>
+    </tr>
+    <tr>
+      <td>upload_dt</td>
+      <td>Upload date of this video.</td>
+      <td>str</td>
+      <td>“2023-07-06”</td>
+    </tr>
+    <tr>
+      <td>caption</td>
+      <td>The caption text of this video</td>
+      <td>str</td>
+      <td>“所以，怎么会没有遗憾呢#张睿  #李晟  #花非花雾非雾”</td>
+    </tr>
+    <tr>
+      <td>duration</td>
+      <td>The time duration of this duration (in milliseconds).</td>
+      <td>float</td>
+      <td>36200.0</td>
+    </tr>
+    <tr>
+      <td>category</td>
+      <td>Category of this video</td>
+      <td>str</td>
+      <td>“明星娱乐”</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="5-descriptions-of-the-fields-in-comment_featurescsv">5. Descriptions of the fields in comment_features.csv</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>comment_id</td>
+      <td>The ID of the comment.</td>
+      <td>int64</td>
+      <td>681190728207</td>
+    </tr>
+    <tr>
+      <td>comment_content</td>
+      <td>The comment content text of this comment.</td>
+      <td>str</td>
+      <td>“乱了、猫还怕老鼠[捂脸]”</td>
+    </tr>
+    <tr>
+      <td>video_id</td>
+      <td>The ID of the video.</td>
+      <td>int64</td>
+      <td>107255530819</td>
+    </tr>
+    <tr>
+      <td>comment_like_cnt</td>
+      <td>The number of likes of this comment</td>
+      <td>int64</td>
+      <td>112</td>
+    </tr>
+    <tr>
+      <td>comment_reply_out</td>
+      <td>The number of replies of this comment</td>
+      <td>int64</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>show_comment_cnt_td</td>
+      <td>The number of shows of this comment.</td>
+      <td>int64</td>
+      <td>645</td>
+    </tr>
+  </tbody>
+</table>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/imgkkk574/KuaiLive">KuaiLive</a> is maintained by <a href="https://github.com/imgkkk574">imgkkk574</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

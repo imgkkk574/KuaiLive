@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>KuaiComt | A Joint Video and Comment Recommendation Dataset</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="KuaiComt" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A Joint Video and Comment Recommendation Dataset" />
+<meta property="og:description" content="A Joint Video and Comment Recommendation Dataset" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="KuaiComt" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="KuaiComt" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"A Joint Video and Comment Recommendation Dataset","headline":"KuaiComt","name":"KuaiComt","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=HEAD">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">KuaiComt</h1>
+      <h2 class="project-tagline">A Joint Video and Comment Recommendation Dataset</h2>
+      
+        <a href="https://github.com/imgkkk574/KuaiLive" class="btn">View on GitHub</a>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="kuaicomt">KuaiComt</h1>
+
+<p><em>KuaiComt</em> is a comprehensive short video recommendation dataset that includes abundant comment text and interaction data. It contains real user behavior logs collected from the short-video mobile app <a href="https://www.kuaishou.com/en">Kuaishou</a>, a leading short video app in China with over 400 million daily active users. On average, users spend over 120 minutes on the app each day, with more than 7 minutes (over 5%) spent in the video comments section. The comments section boasts a UV penetration rate of over 60%.</p>
+
+<p><strong>This is the first recommendation dataset that not only records item text and interaction data but also includes abundant comment text and interaction data!</strong></p>
+
+<h2 id="overview">Overview</h2>
+
+<p>The following figure provides an example of the dataset. When users enter the app, they can scroll up and down to browse different videos. Additionally, users can click the comment button on the right side of the video to enter the comments section, where they can scroll through comments and engage in interactive behaviors such as likes and replies.</p>
+
+<p><img src="/assets/fig/example.png" alt="kuaidata" /></p>
+
+<p>The other related datasets are: <a href="https://kuairec.com/">KuaiRec</a>, <a href="https://kuairand.com/">KuaiRand</a> and <a href="https://kuaisar.github.io/">KuaiSAR</a>.</p>
+
+<h3 id="advantages">Advantages:</h3>
+
+<p>Compared with other existing datasets, KuaiComt has the following advantages:</p>
+
+<ul>
+  <li>✅ It is the first dataset that includes real user interaction behavior with comments.</li>
+  <li>✅ It contains abundant text features, such as video caption text and comment content text.</li>
+  <li>✅ It has the most comprehensive side information, including explicit user IDs, video IDs, comment IDs, interaction timestamps, and their abundant features.</li>
+  <li>✅ It provides various feedback signals (such as clicks, likes, and watch time for videos, and likes and replies for comments) for each interaction with videos and comments to describe comprehensive user feedback.</li>
+</ul>
+
+<h3 id="statistics">Statistics</h3>
+
+<p>Here we show some basic statistics.
+Check this page for more detailed <a href="./detailed_statistics.html">Descriptions</a>.</p>
+
+<p>KuaiComt contains the real behavior of 34,701 users on the Kuaishou app from September 30, 2023, to November 3, 2023. Due to the large number of comment impressions to users, we only provide data on user interactions with comments (likes and replies). Videos with fewer than 55 comments and comments with fewer than 2 interactions were filtered out. Additionally, video titles and comment texts were anonymized.</p>
+
+<p>Basic statistics of this dataset in the are summarized as follows:</p>
+
+<p><strong>KuaiComt</strong></p>
+
+<style>
+table {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dataset</th>
+      <th>#Users</th>
+      <th>#Videos</th>
+      <th>#Comments</th>
+      <th>#Impressions-V</th>
+      <th>#OpenComments-V</th>
+      <th>#Interactions-C</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>KuaiComt</td>
+      <td>34,701</td>
+      <td>82,452</td>
+      <td>16,352,904</td>
+      <td>119,696,682</td>
+      <td>16,033,443</td>
+      <td>1,002,672</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>where ‘Impressions-V’ denotes the impressions of videos to users, ‘OpenComments-V’ denotes the behavior of users opening the comments section, and ‘Interactions-C’ denotes user interactions with comments (such as likes or replies).</p>
+
+<p>The short descriptions for each feature filed are listed as below. Please refer to this <a href="./detailed_statistics.html">page</a> for more details and examples.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Feature</strong></th>
+      <th>Detailed Descriptions.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>User feature</strong></td>
+      <td>Users have abundant side information, e.g., user active degree, follow count.</td>
+    </tr>
+    <tr>
+      <td><strong>Video feature</strong></td>
+      <td>Videos have abundant side information, e.g., caption, duration.</td>
+    </tr>
+    <tr>
+      <td><strong>Comment feature</strong></td>
+      <td>Comments have abundant side information, e.g., comment content, comment like cnt.</td>
+    </tr>
+    <tr>
+      <td><strong>V-inter feature</strong></td>
+      <td>Video-interactions have 12 features, e.g., comment stay time, play time, likes, and follows.</td>
+    </tr>
+    <tr>
+      <td><strong>C-inter feature</strong></td>
+      <td>Comment-interactions has 2 features, including 2 types of user feedback: likes and replies.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="download-the-data">Download the data:</h2>
+
+<p>KuaiComt has been shared at <a href="https://zenodo.org/records/13922581">https://zenodo.org/records/13922581</a>.</p>
+
+<p><a href="https://doi.org/10.5281/zenodo.13922581"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.13922581.svg" alt="DOI" /></a></p>
+
+<p>According to our company’s data sharing policy, our datasets are made available through confidentiality agreements.</p>
+
+<blockquote>
+  <p>In compliance with the recently enacted <strong>Personal Information Protection Law</strong> and <strong>Data Security Assessment Measures for Cross-Border Data Transfer in China</strong>, we currently provide datasets exclusively to Chinese entities (universities, research institutes, and companies).</p>
+</blockquote>
+
+<blockquote>
+  <p>You are required to send us your <strong>name</strong> and <strong>institutional details</strong>, after which we will provide you with the relevant confidentiality agreement. The dataset will be shared with you only after the agreement has been signed.</p>
+</blockquote>
+
+<p>OPTION 1. Download via your browser:</p>
+
+<p>You can download the dataset from this <a href="https://zenodo.org/records/13922581">link</a>.</p>
+
+<p>OPTION 2: Download via the ‘wget’ command tool:</p>
+
+<p>For the <strong>KuaiComt</strong> dataset:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://zenodo.org/record/13922581/files/KuaiComt.zip
+
+unzip KuaiComt.zip
+</code></pre></div></div>
+
+<h2 id="citation">Citation</h2>
+
+<p>If you find our dataset useful, please cite the paper:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{zhang2025comment,
+  title={Comment Staytime Prediction with LLM-enhanced Comment Understanding},
+  author={Zhang, Changshuo and Lin, Zihan and Liu, Shukai and Liu, Yongqi and Li, Han},
+  journal={arXiv preprint arXiv:2504.01602},
+  year={2025}
+}
+</code></pre></div></div>
+
+<p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg" alt="CC BY-NC-SA 4.0" /></a></p>
+
+<p>This work is licensed under a
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+<p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0" /></a></p>
+
+<h2 id="contact">Contact</h2>
+
+<p>If you have any questions, please feel free to contact us through <a href="https://github.com/lyingCS/KuaiComt.github.io/issues">github issues</a> or emails (linzihan03@kuaishou.com)</p>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/imgkkk574/KuaiLive">KuaiLive</a> is maintained by <a href="https://github.com/imgkkk574">imgkkk574</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
