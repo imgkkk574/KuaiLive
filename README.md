@@ -1,5 +1,4 @@
-# KuaiComt
-
+# KuaiLive
 
 *KuaiLive* is a large-scale real-world dataset for live streaming recommendation collected from Kuaishou, a leading live streaming platform in China with over 400 million daily active users. 
 
