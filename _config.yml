@@ -1,7 +1,7 @@
 # show_downloads: true
 # google_analytics: G-GZNFK3DY0Z
 theme: jekyll-theme-cayman
-title: KuaiComt
-description: "A Joint Video and Comment Recommendation Dataset"
+title: KuaiLive
+description: "A real-world dataset for live streaming recommendation"
 github:
   is_project_page: true
