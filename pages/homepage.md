@@ -36,7 +36,7 @@ Compared with other existing datasets, KuaiLive has the following advantages:
 Here we show some basic statistics.
 Check this page for more detailed [Descriptions](./detailed_statistics.html).
 
-KuaiComt contains the real behavior of 34,701 users on the Kuaishou app from September 30, 2023, to November 3, 2023. Due to the large number of comment impressions to users, we only provide data on user interactions with comments (likes and replies). Videos with fewer than 55 comments and comments with fewer than 2 interactions were filtered out. Additionally, video titles and comment texts were anonymized.
+KuaiLive contains the real behavior of 23,772 users who engaged in all four types of interactions (click, comment, like and gift) on the Kuaishou app from May 5, 2025, to May 25, 2025. KuaiLive also provides both side information (e.g., gender, age, country) and fine-grained behavioral features (e.g., watch time, gift prices) to facilitate future research. 
 
 Basic statistics of this dataset in the are summarized as follows:
 
@@ -51,16 +51,6 @@ table {
 }
 </style>
 
-
-| Property           | LiveRec      | LSEC     | Klive    | KuaiLive                |
-|:------------------:|:------------:|:--------:|:--------:|:-----------------------:|
-| # Users            | 15,500,000   | 202,850  | -        | 23,772                  |
-| # Streamers        | 465,000      | 7,395    | 9,932    | 452,621                 |
-| # Rooms            | ?            | -        | 17,798   | 11,613,708              |
-| # Interactions     | 124,000,000  | 5,439,288| -        | 5,357,998               |
-| Lifecycle          | ❌           | ❌       | ❌       | ✅                      |
-| Side info features | ❌           | ❌       | ❌       | ✅                      |
-| Action type        | click        | follow   | -        | click+comment+like+gift |
 
 
 | Dataset   | #Users  | #Streamers |  #Rooms    | #Interactions | #Clicks   | #Comments | #Likes   | #Gifts   |
