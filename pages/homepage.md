@@ -16,7 +16,7 @@ permalink: /
 
 On Kuaishou, users can discover and enter live rooms of interest, where they interact with streamers in real time through behaviors such as clicking, liking, commenting, following, and sending virtual gifts. 
 
-![kuaidata](../assets/fig/example.png)
+![kuaidata](../assets/fig/kuaishou.png)
 
 
 ### Advantages:
@@ -57,6 +57,8 @@ table {
 |:---------:|:-------:|:----------:|:----------:|:-------------:|:---------:|:---------:|:--------:|:--------:|
 | ourdata   | 23,772  | 452,621    | 11,613,708 | 5,357,998     | 4,909,515 | 196,526   | 179,311  | 72,646   |
 
+
+The short descriptions for each feature filed are listed as below. Please refer to this [page](./detailed_statistics.html) for more details and examples.
 
 | Feature Type       | Feature Descriptions |
 |:------------------:|:--------------------:|
