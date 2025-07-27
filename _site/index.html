@@ -25,7 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="/assets/css/style.css?v=b6bb50731b20b210e5c8fc5d00fb404ab3cdae17">
+    <link rel="stylesheet" href="/assets/css/style.css?v=33a2cb6850c92246dce5ebcbed2da539d6285e46">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup Google Analytics -->
@@ -61,7 +61,7 @@
 
 <p>On Kuaishou, users can discover and enter live rooms of interest, where they interact with streamers in real time through behaviors such as clicking, liking, commenting, following, and sending virtual gifts.</p>
 
-<p><img src="/assets/fig/example.png" alt="kuaidata" /></p>
+<p><img src="/assets/fig/kuaishou.png" alt="kuaidata" /></p>
 
 <h3 id="advantages">Advantages:</h3>
 
@@ -81,7 +81,7 @@
 <p>Here we show some basic statistics.
 Check this page for more detailed <a href="./detailed_statistics.html">Descriptions</a>.</p>
 
-<p>KuaiComt contains the real behavior of 34,701 users on the Kuaishou app from September 30, 2023, to November 3, 2023. Due to the large number of comment impressions to users, we only provide data on user interactions with comments (likes and replies). Videos with fewer than 55 comments and comments with fewer than 2 interactions were filtered out. Additionally, video titles and comment texts were anonymized.</p>
+<p>KuaiLive contains the real behavior of 23,772 users who engaged in all four types of interactions (click, comment, like and gift) on the Kuaishou app from May 5, 2025, to May 25, 2025. KuaiLive also provides both side information (e.g., gender, age, country) and fine-grained behavioral features (e.g., watch time, gift prices) to facilitate future research.</p>
 
 <p>Basic statistics of this dataset in the are summarized as follows:</p>
 
@@ -94,69 +94,6 @@ table {
   margin-right: auto;
 }
 </style>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Property</th>
-      <th style="text-align: center">LiveRec</th>
-      <th style="text-align: center">LSEC</th>
-      <th style="text-align: center">Klive</th>
-      <th style="text-align: center">KuaiLive</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"># Users</td>
-      <td style="text-align: center">15,500,000</td>
-      <td style="text-align: center">202,850</td>
-      <td style="text-align: center">-</td>
-      <td style="text-align: center">23,772</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"># Streamers</td>
-      <td style="text-align: center">465,000</td>
-      <td style="text-align: center">7,395</td>
-      <td style="text-align: center">9,932</td>
-      <td style="text-align: center">452,621</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"># Rooms</td>
-      <td style="text-align: center">?</td>
-      <td style="text-align: center">-</td>
-      <td style="text-align: center">17,798</td>
-      <td style="text-align: center">11,613,708</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"># Interactions</td>
-      <td style="text-align: center">124,000,000</td>
-      <td style="text-align: center">5,439,288</td>
-      <td style="text-align: center">-</td>
-      <td style="text-align: center">5,357,998</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">Lifecycle</td>
-      <td style="text-align: center">❌</td>
-      <td style="text-align: center">❌</td>
-      <td style="text-align: center">❌</td>
-      <td style="text-align: center">✅</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">Side info features</td>
-      <td style="text-align: center">❌</td>
-      <td style="text-align: center">❌</td>
-      <td style="text-align: center">❌</td>
-      <td style="text-align: center">✅</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">Action type</td>
-      <td style="text-align: center">click</td>
-      <td style="text-align: center">follow</td>
-      <td style="text-align: center">-</td>
-      <td style="text-align: center">click+comment+like+gift</td>
-    </tr>
-  </tbody>
-</table>
 
 <table>
   <thead>
@@ -186,6 +123,8 @@ table {
     </tr>
   </tbody>
 </table>
+
+<p>The short descriptions for each feature filed are listed as below. Please refer to this <a href="./detailed_statistics.html">page</a> for more details and examples.</p>
 
 <table>
   <thead>
