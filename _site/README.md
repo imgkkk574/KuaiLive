@@ -9,7 +9,7 @@
 
 On Kuaishou, users can discover and enter live rooms of interest, where they interact with streamers in real time through behaviors such as clicking, liking, commenting, following, and sending virtual gifts. 
 
-![kuaidata](../assets/fig/kuaishou.png)
+![kuaidata](./assets/fig/kuaishou.png)
 ## Download the data:
 
 KuaiLive has been shared at ... 
