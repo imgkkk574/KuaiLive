@@ -7,7 +7,7 @@ permalink: /
 
 # KuaiLive
 
-*KuaiLive* is a large-scale real-world dataset for live streaming recommendation collected from Kuaishou, a leading live streaming platform in China with over 400 million daily active users. 
+*KuaiLive* is a large-scale real-world dataset for live streaming recommendation collected from Kuaishou, a leading live streaming platform in China with over 400 million daily active users. Notably, revenue from live streaming contributes approximately 30\% of the company’s total income, highlighting its significant commercial potential.
 
 **This is the first publicly available live streaming dataset that captures rich and realistic sequences of user interactions within an interactive app environment.**
 
@@ -62,8 +62,8 @@ The short descriptions for each feature filed are listed as below. Please refer 
 
 | Feature Type       | Feature Descriptions |
 |:------------------:|:--------------------:|
-| **User feature**   | gender, age, country, device_brand, device_price, reg_timestamp, fans_num, follow_num, <br> first_watch_live_timestamp, accu_watch_live_cnt, accu_watch_live_duration, is_live_author, is_video_author, <br> and 7 encrypted vectors. |
-| **Streamer feature** | gender, age, country, device_brand, device_price, reg_timestamp, live_operation_tag, fans_num, fans_group_num, <br> follow_num, first_live_timestamp, accu_live_cnt, accu_live_duration, accu_play_cnt, accu_play_duration, <br> and 7 encrypted vectors. |
+| **User feature**   | gender, age, country, device_brand, device_price, reg_timestamp, fans_num, follow_num, first_watch_live_timestamp, accu_watch_live_cnt, accu_watch_live_duration, is_live_author, is_video_author, and 7 encrypted vectors. |
+| **Streamer feature** | gender, age, country, device_brand, device_price, reg_timestamp, live_operation_tag, fans_num, fans_group_num, follow_num, first_live_timestamp, accu_live_cnt, accu_live_duration, accu_play_cnt, accu_play_duration, and 7 encrypted vectors. |
 | **Room feature**   | start_timestamp, end_timestamp, live_type, live_content_category, and live_name_representation. |
 
 ## Download the data:
