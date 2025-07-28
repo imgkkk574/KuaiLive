@@ -7,7 +7,7 @@ permalink: /
 
 # KuaiLive
 
-*KuaiLive* is a large-scale real-world dataset for live streaming recommendation collected from Kuaishou, a leading live streaming platform in China with over 400 million daily active users. Notably, revenue from live streaming contributes approximately 30\% of the company’s total income, highlighting its significant commercial potential.
+*KuaiLive* is a large-scale real-world dataset for live streaming recommendation collected from [Kuaishou](https://www.kuaishou.com/en), a leading live streaming platform in China with over 400 million daily active users. Notably, revenue from live streaming contributes approximately 30% of the company’s total income, highlighting its significant commercial potential.
 
 **This is the first publicly available live streaming dataset that captures rich and realistic sequences of user interactions within an interactive app environment.**
 
