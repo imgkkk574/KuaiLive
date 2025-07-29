@@ -26,6 +26,9 @@ File organization:
 
 #### 1. Descriptions of the fields in streamer.csv
 
+The file ```streamer.csv``` contains comprehensive information about all streamers, including ```streamer_id``` and associated side information, such as ```age```, ```country```, and a set of binary features.
+
+
 | Field Name         | Description                               | Type  | Example |
 | ------------------ | ----------------------------------------- | ----- | ------- |
 |  streamer_id         |    The ID of the streamer.                  | int64 | 56006        |
@@ -56,6 +59,8 @@ File organization:
 
 #### 2. Descriptions of the fields in room.csv
 
+The file ```room.csv``` contains detailed information about all live rooms, including basic fields such as the date, room id, the corresponding streamer, as well as temporal data and categorical descriptors.
+
 | Field Name         | Description                               | Type  | Example |
 | ------------------ | ----------------------------------------- | ----- | ------- |
 |     p_date         |      The date of the live room.           | int64 |20250525 |
@@ -68,6 +73,8 @@ File organization:
 |   live_name_id     |    The id associated with the live room title.         |    int64   |  0      |
 
 #### 3. Descriptions of the fields in user.csv
+
+The file ```user.csv``` contains comprehensive information about all users, including the ```user_id``` and side information such as ```age```, ```country```, and a set of binary features.
 
 | Field Name         | Description                               | Type  | Example |
 | ------------------ | ----------------------------------------- | ----- | ------- |
