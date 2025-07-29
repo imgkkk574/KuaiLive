@@ -282,7 +282,7 @@
     </tr>
     <tr>
       <td>live_name_id</td>
-      <td>The id associated with the live room title.</td>
+      <td>The id associated with the live room title, used to index the encoded title embeddings.</td>
       <td>int64</td>
       <td>0</td>
     </tr>
@@ -434,6 +434,8 @@
 
 <h4 id="4-descriptions-of-the-fields-in-commentcsv">4. Descriptions of the fields in comment.csv</h4>
 
+<p>The file <code class="language-plaintext highlighter-rouge">comment.csv</code> records user interaction in the form of comments. Each entry corresponds to a single commenting event and includes the associated user, live room, streamer, and timestamp.</p>
+
 <table>
   <thead>
     <tr>
@@ -472,6 +474,8 @@
 </table>
 
 <h4 id="5-descriptions-of-the-fields-in-giftcsv">5. Descriptions of the fields in gift.csv</h4>
+
+<p>The file <code class="language-plaintext highlighter-rouge">gift.csv</code> records user interactions in the form of sending gifts. Each entry corresponds to a single gifting event and includes the associated user, live room, streamer, timestamp, and the price of the gift.</p>
 
 <table>
   <thead>
@@ -518,6 +522,8 @@
 
 <h4 id="6-descriptions-of-the-fields-in-likecsv">6. Descriptions of the fields in like.csv</h4>
 
+<p>The file <code class="language-plaintext highlighter-rouge">like.csv</code> records user interaction in the form of liking. Each entry corresponds to a single liking event and includes the associated user, live room, streamer, and timestamp.</p>
+
 <table>
   <thead>
     <tr>
@@ -556,6 +562,8 @@
 </table>
 
 <h4 id="7-descriptions-of-the-fields-in-clickcsv">7. Descriptions of the fields in click.csv</h4>
+
+<p>The file <code class="language-plaintext highlighter-rouge">click.csv</code> contains records of user interactions in the form of click-to-watch behavior. Each record corresponds to a single click-to-watching event and includes the user id, the associated live room and streamer, the timestamp of the interaction, and the watch time.</p>
 
 <table>
   <thead>
@@ -602,6 +610,8 @@
 
 <h4 id="8-descriptions-of-the-fields-in-negativecsv">8. Descriptions of the fields in negative.csv</h4>
 
+<p>The file <code class="language-plaintext highlighter-rouge">negative.csv</code> contains records of all exposures that were presented to users but not clicked. Each record includes the corresponding user, live room, streamer, and the timestamp of the exposure.</p>
+
 <table>
   <thead>
     <tr>
@@ -641,37 +651,7 @@
 
 <h4 id="9-descriptions-of-the-fields-in-title_embeddingspca128npz">9. Descriptions of the fields in title_embeddings.pca128.npz</h4>
 
-<table>
-  <thead>
-    <tr>
-      <th>Field Name</th>
-      <th>Description</th>
-      <th>Type</th>
-      <th>Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
+<p>The file <code class="language-plaintext highlighter-rouge">title_embeddings.pca128.npz</code> contains embeddings of live room titles, obtained by encoding the titles using the <code class="language-plaintext highlighter-rouge">bge-base-zh-v1.5</code> model and applying PCA for dimensionality reduction to 128 dimensions. The embeddings are indexed by <code class="language-plaintext highlighter-rouge">live_name_id</code>.</p>
 
 
       <footer class="site-footer">

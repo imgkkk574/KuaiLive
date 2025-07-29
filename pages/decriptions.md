@@ -70,7 +70,7 @@ The file ```room.csv``` contains detailed information about all live rooms, incl
 | start_timestamp    |  The start time of the live room.         |  int64  |1748131180878  |
 |   end_timestamp    | The end time of the live room.         |  int64  |1748275200000  |
 |live_content_category|  The content category of the live room.      |  string     |  shop       |
-|   live_name_id     |    The id associated with the live room title.         |    int64   |  0      |
+|   live_name_id     |    The id associated with the live room title, used to index the encoded title embeddings.         |    int64   |  0      |
 
 #### 3. Descriptions of the fields in user.csv
 
@@ -103,6 +103,8 @@ The file ```user.csv``` contains comprehensive information about all users, incl
 
 #### 4. Descriptions of the fields in comment.csv
 
+The file ```comment.csv``` records user interaction in the form of comments. Each entry corresponds to a single commenting event and includes the associated user, live room, streamer, and timestamp.
+
 | Field Name         | Description                               | Type  | Example |
 | ------------------ | ----------------------------------------- | ----- | ------- |
 |    user_id         |      The id of the user.                  | int64 |    23154 |
@@ -112,6 +114,8 @@ The file ```user.csv``` contains comprehensive information about all users, incl
 
 
 #### 5. Descriptions of the fields in gift.csv
+
+The file ```gift.csv``` records user interactions in the form of sending gifts. Each entry corresponds to a single gifting event and includes the associated user, live room, streamer, timestamp, and the price of the gift.
 
 | Field Name         | Description                               | Type  | Example |
 | ------------------ | ----------------------------------------- | ----- | ------- |
@@ -123,6 +127,8 @@ The file ```user.csv``` contains comprehensive information about all users, incl
 
 #### 6. Descriptions of the fields in like.csv
 
+The file ```like.csv``` records user interaction in the form of liking. Each entry corresponds to a single liking event and includes the associated user, live room, streamer, and timestamp.
+
 | Field Name         | Description                               | Type  | Example |
 | ------------------ | ----------------------------------------- | ----- | ------- |
 |    user_id         |       The id of the user.                  | int64  |   5222 |
@@ -132,6 +138,8 @@ The file ```user.csv``` contains comprehensive information about all users, incl
 
 
 #### 7. Descriptions of the fields in click.csv
+
+The file ```click.csv``` contains records of user interactions in the form of click-to-watch behavior. Each record corresponds to a single click-to-watching event and includes the user id, the associated live room and streamer, the timestamp of the interaction, and the watch time.
 
 | Field Name         | Description                               | Type  | Example |
 | ------------------ | ----------------------------------------- | ----- | ------- |
@@ -144,6 +152,8 @@ The file ```user.csv``` contains comprehensive information about all users, incl
 
 #### 8. Descriptions of the fields in negative.csv
 
+The file ```negative.csv``` contains records of all exposures that were presented to users but not clicked. Each record includes the corresponding user, live room, streamer, and the timestamp of the exposure.
+
 | Field Name         | Description                               | Type  | Example |
 | ------------------ | ----------------------------------------- | ----- | ------- |
 |    user_id         |       The id of the user.                 | int64 |   9810 |
@@ -154,9 +164,4 @@ The file ```user.csv``` contains comprehensive information about all users, incl
 
 #### 9. Descriptions of the fields in title_embeddings.pca128.npz
 
-| Field Name         | Description                               | Type  | Example |
-| ------------------ | ----------------------------------------- | ----- | ------- |
-|                    |                                           |       |         |
-|                    |                                           |       |         |
-|                    |                                           |       |         |
-
+The file ```title_embeddings.pca128.npz``` contains embeddings of live room titles, obtained by encoding the titles using the ```bge-base-zh-v1.5``` model and applying PCA for dimensionality reduction to 128 dimensions. The embeddings are indexed by ```live_name_id```.
