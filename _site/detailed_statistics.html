@@ -25,7 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="/assets/css/style.css?v=bc191d3e79a764db4f051f08c4c1e14ce3f9bcba">
+    <link rel="stylesheet" href="/assets/css/style.css?v=40c95a2684f153d7692f07528860c8abcd27de3e">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup Google Analytics -->
@@ -58,17 +58,18 @@
 <p>File organization:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  KuaiLive
-  ├── author.csv          
-  ├── click.csv
+  ├── streamer.csv          
+  ├── room.csv
+  ├── user.csv
   ├── comment.csv
   ├── gift.csv
   ├── like.csv
-  ├── mapped_room.csv
-  ├── title_embeddings_pca128.npy
-  └── user.csv
+  ├── click.csv
+  ├── negative.csv
+  └── title_embeddings_pca128.npy
 </code></pre></div></div>
 
-<h4 id="1-descriptions-of-the-fields-in-authorcsv">1. Descriptions of the fields in author.csv</h4>
+<h4 id="1-descriptions-of-the-fields-in-streamercsv">1. Descriptions of the fields in streamer.csv</h4>
 
 <table>
   <thead>
@@ -81,32 +82,32 @@
   </thead>
   <tbody>
     <tr>
-      <td>author_id</td>
-      <td>The ID of the author.</td>
+      <td>streamer_id</td>
+      <td>The ID of the streamer.</td>
       <td>int64</td>
       <td>56006</td>
     </tr>
     <tr>
       <td>gender</td>
-      <td>The gender of the author.</td>
+      <td>The gender of the streamer.</td>
       <td>string</td>
       <td>M</td>
     </tr>
     <tr>
       <td>age</td>
-      <td>The age range of the author.</td>
+      <td>The age range of the streamer.</td>
       <td>string (range)</td>
       <td>24-30</td>
     </tr>
     <tr>
       <td>country</td>
-      <td>The country where the author resides.</td>
+      <td>The country where the streamer resides.</td>
       <td>string</td>
       <td>China</td>
     </tr>
     <tr>
       <td>device_brand</td>
-      <td>The brand of the device used by the author.</td>
+      <td>The brand of the device used by the streamer.</td>
       <td>string</td>
       <td>APPLE</td>
     </tr>
@@ -118,37 +119,37 @@
     </tr>
     <tr>
       <td>live_operation_tag</td>
-      <td>The operational category of the author.</td>
+      <td>The operational category of the streamer.</td>
       <td>string</td>
       <td>Relationship</td>
     </tr>
     <tr>
       <td>fans_user_num</td>
-      <td>The number of users who have followed the author.</td>
+      <td>The number of users who have followed the streamer.</td>
       <td>string (range)</td>
       <td>10000-100000</td>
     </tr>
     <tr>
       <td>fans_group_fans_num</td>
-      <td>The number of fans from the author’s fans group.</td>
+      <td>The number of fans from the streamer’s fans group.</td>
       <td>string (range)</td>
       <td>0-10</td>
     </tr>
     <tr>
       <td>follow_user_num</td>
-      <td>The number of users followed by the author.</td>
+      <td>The number of users followed by the streamer.</td>
       <td>string (range)</td>
       <td>1000-10000</td>
     </tr>
     <tr>
       <td>first_live_timestamp</td>
-      <td>The date when the author started their first live room.</td>
+      <td>The date when the streamer started their first live room.</td>
       <td>timestamp</td>
       <td>2018-02-04</td>
     </tr>
     <tr>
       <td>accu_live_cnt</td>
-      <td>The total number of live rooms the author has hosted.</td>
+      <td>The total number of live rooms the streamer has hosted.</td>
       <td>string (range)</td>
       <td>100-500</td>
     </tr>
@@ -160,7 +161,7 @@
     </tr>
     <tr>
       <td>accu_play_cnt</td>
-      <td>The total number of times the author’s live rooms have been viewed.</td>
+      <td>The total number of times the streamer’s live rooms have been viewed.</td>
       <td>string (range)</td>
       <td>100000-500000</td>
     </tr>
@@ -172,7 +173,7 @@
     </tr>
     <tr>
       <td>reg_timestamp</td>
-      <td>The date when the author registered on the platform.</td>
+      <td>The date when the streamer registered on the platform.</td>
       <td>timestamp</td>
       <td>2014-07-03</td>
     </tr>
@@ -221,175 +222,7 @@
   </tbody>
 </table>
 
-<h4 id="2-descriptions-of-the-fields-in-clickcsv">2. Descriptions of the fields in click.csv</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th>Field Name</th>
-      <th>Description</th>
-      <th>Type</th>
-      <th>Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>user_id</td>
-      <td>The id of the user.</td>
-      <td>int64</td>
-      <td>8505</td>
-    </tr>
-    <tr>
-      <td>live_id</td>
-      <td>The id of the live room.</td>
-      <td>int64</td>
-      <td>9342705</td>
-    </tr>
-    <tr>
-      <td>author_id</td>
-      <td>The id of the author.</td>
-      <td>int64</td>
-      <td>392199</td>
-    </tr>
-    <tr>
-      <td>timestamp</td>
-      <td>The timestamp when this interaction occurred.</td>
-      <td>int64</td>
-      <td>1746374400022</td>
-    </tr>
-    <tr>
-      <td>watch_live_time</td>
-      <td>The user’s watch time for this interaction, in milliseconds.</td>
-      <td>int64</td>
-      <td>2852</td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="3-descriptions-of-the-fields-in-commentcsv">3. Descriptions of the fields in comment.csv</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th>Field Name</th>
-      <th>Description</th>
-      <th>Type</th>
-      <th>Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>user_id</td>
-      <td>The id of the user.</td>
-      <td>int64</td>
-      <td>23154</td>
-    </tr>
-    <tr>
-      <td>live_id</td>
-      <td>The id of the live room.</td>
-      <td>int64</td>
-      <td>7865151</td>
-    </tr>
-    <tr>
-      <td>author_id</td>
-      <td>The id of the author.</td>
-      <td>int64</td>
-      <td>433825</td>
-    </tr>
-    <tr>
-      <td>timestamp</td>
-      <td>The timestamp when this interaction occurred.</td>
-      <td>int64</td>
-      <td>1746374400819</td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="4-descriptions-of-the-fields-in-giftcsv">4. Descriptions of the fields in gift.csv</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th>Field Name</th>
-      <th>Description</th>
-      <th>Type</th>
-      <th>Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>user_id</td>
-      <td>The id of the user.</td>
-      <td>int64</td>
-      <td>11504</td>
-    </tr>
-    <tr>
-      <td>live_id</td>
-      <td>The id of the live room.</td>
-      <td>int64</td>
-      <td>6086847</td>
-    </tr>
-    <tr>
-      <td>author_id</td>
-      <td>The id of the author.</td>
-      <td>int64</td>
-      <td>114419</td>
-    </tr>
-    <tr>
-      <td>timestamp</td>
-      <td>The timestamp when this interaction occurred.</td>
-      <td>int64</td>
-      <td>1746374441260</td>
-    </tr>
-    <tr>
-      <td>gift_price</td>
-      <td>The total price of gifts sent during this interaction.</td>
-      <td>int64</td>
-      <td>2</td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="5-descriptions-of-the-fields-in-likecsv">5. Descriptions of the fields in like.csv</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th>Field Name</th>
-      <th>Description</th>
-      <th>Type</th>
-      <th>Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>user_id</td>
-      <td>The id of the user.</td>
-      <td>int64</td>
-      <td>5222</td>
-    </tr>
-    <tr>
-      <td>live_id</td>
-      <td>The id of the live room.</td>
-      <td>int64</td>
-      <td>541927</td>
-    </tr>
-    <tr>
-      <td>author_id</td>
-      <td>The id of the author.</td>
-      <td>int64</td>
-      <td>244121</td>
-    </tr>
-    <tr>
-      <td>timestamp</td>
-      <td>The timestamp when this interaction occurred.</td>
-      <td>int64</td>
-      <td>1746374414059</td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="6-descriptions-of-the-fields-in-mapped_roomcsv">6. Descriptions of the fields in mapped_room.csv</h4>
+<h4 id="2-descriptions-of-the-fields-in-roomcsv">2. Descriptions of the fields in room.csv</h4>
 
 <table>
   <thead>
@@ -414,8 +247,8 @@
       <td>7336601</td>
     </tr>
     <tr>
-      <td>author_id</td>
-      <td>The id of the author.</td>
+      <td>streamer_id</td>
+      <td>The id of the streamer.</td>
       <td>int64</td>
       <td>252634</td>
     </tr>
@@ -452,40 +285,7 @@
   </tbody>
 </table>
 
-<h4 id="7-descriptions-of-the-fields-in-title_embeddingspca128npz">7. Descriptions of the fields in title_embeddings.pca128.npz</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th>Field Name</th>
-      <th>Description</th>
-      <th>Type</th>
-      <th>Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="8-descriptions-of-the-fields-in-usercsv">8. Descriptions of the fields in user.csv</h4>
+<h4 id="3-descriptions-of-the-fields-in-usercsv">3. Descriptions of the fields in user.csv</h4>
 
 <table>
   <thead>
@@ -570,8 +370,8 @@
       <td>0-1000000000</td>
     </tr>
     <tr>
-      <td>is_live_author</td>
-      <td>A binary indicator showing whether the user is a live author (1 = yes, 0 = no).</td>
+      <td>is_live_streamer</td>
+      <td>A binary indicator showing whether the user is a live streamer (1 = yes, 0 = no).</td>
       <td>int64</td>
       <td>0</td>
     </tr>
@@ -625,6 +425,247 @@
     </tr>
   </tbody>
 </table>
+
+<h4 id="4-descriptions-of-the-fields-in-commentcsv">4. Descriptions of the fields in comment.csv</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>user_id</td>
+      <td>The id of the user.</td>
+      <td>int64</td>
+      <td>23154</td>
+    </tr>
+    <tr>
+      <td>live_id</td>
+      <td>The id of the live room.</td>
+      <td>int64</td>
+      <td>7865151</td>
+    </tr>
+    <tr>
+      <td>streamer_id</td>
+      <td>The id of the streamer.</td>
+      <td>int64</td>
+      <td>433825</td>
+    </tr>
+    <tr>
+      <td>timestamp</td>
+      <td>The timestamp when this interaction occurred.</td>
+      <td>int64</td>
+      <td>1746374400819</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="5-descriptions-of-the-fields-in-giftcsv">5. Descriptions of the fields in gift.csv</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>user_id</td>
+      <td>The id of the user.</td>
+      <td>int64</td>
+      <td>11504</td>
+    </tr>
+    <tr>
+      <td>live_id</td>
+      <td>The id of the live room.</td>
+      <td>int64</td>
+      <td>6086847</td>
+    </tr>
+    <tr>
+      <td>streamer_id</td>
+      <td>The id of the streamer.</td>
+      <td>int64</td>
+      <td>114419</td>
+    </tr>
+    <tr>
+      <td>timestamp</td>
+      <td>The timestamp when this interaction occurred.</td>
+      <td>int64</td>
+      <td>1746374441260</td>
+    </tr>
+    <tr>
+      <td>gift_price</td>
+      <td>The total price of gifts sent during this interaction.</td>
+      <td>int64</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="6-descriptions-of-the-fields-in-likecsv">6. Descriptions of the fields in like.csv</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>user_id</td>
+      <td>The id of the user.</td>
+      <td>int64</td>
+      <td>5222</td>
+    </tr>
+    <tr>
+      <td>live_id</td>
+      <td>The id of the live room.</td>
+      <td>int64</td>
+      <td>541927</td>
+    </tr>
+    <tr>
+      <td>streamer_id</td>
+      <td>The id of the streamer.</td>
+      <td>int64</td>
+      <td>244121</td>
+    </tr>
+    <tr>
+      <td>timestamp</td>
+      <td>The timestamp when this interaction occurred.</td>
+      <td>int64</td>
+      <td>1746374414059</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="7-descriptions-of-the-fields-in-clickcsv">7. Descriptions of the fields in click.csv</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>user_id</td>
+      <td>The id of the user.</td>
+      <td>int64</td>
+      <td>8505</td>
+    </tr>
+    <tr>
+      <td>live_id</td>
+      <td>The id of the live room.</td>
+      <td>int64</td>
+      <td>9342705</td>
+    </tr>
+    <tr>
+      <td>streamer_id</td>
+      <td>The id of the streamer.</td>
+      <td>int64</td>
+      <td>392199</td>
+    </tr>
+    <tr>
+      <td>timestamp</td>
+      <td>The timestamp when this interaction occurred.</td>
+      <td>int64</td>
+      <td>1746374400022</td>
+    </tr>
+    <tr>
+      <td>watch_live_time</td>
+      <td>The user’s watch time for this interaction, in milliseconds.</td>
+      <td>int64</td>
+      <td>2852</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="8-descriptions-of-the-fields-in-negativecsv">8. Descriptions of the fields in negative.csv</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>user_id</td>
+      <td>The id of the user.</td>
+      <td>int64</td>
+      <td>9810</td>
+    </tr>
+    <tr>
+      <td>live_id</td>
+      <td>The id of the live room.</td>
+      <td>int64</td>
+      <td>10816308</td>
+    </tr>
+    <tr>
+      <td>streamer_id</td>
+      <td>The id of the streamer.</td>
+      <td>int64</td>
+      <td>17452</td>
+    </tr>
+    <tr>
+      <td>timestamp</td>
+      <td>The timestamp when this interaction occurred.</td>
+      <td>int64</td>
+      <td>1746525926498</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="9-descriptions-of-the-fields-in-title_embeddingspca128npz">9. Descriptions of the fields in title_embeddings.pca128.npz</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
 
 
       <footer class="site-footer">
