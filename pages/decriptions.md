@@ -103,7 +103,7 @@ The file ```user.csv``` contains comprehensive information about all users, incl
 
 #### 4. Descriptions of the fields in comment.csv
 
-The file ```comment.csv``` records user interaction in the form of comments. Each entry corresponds to a single commenting event and includes the associated user, live room, streamer, and timestamp.
+The file ```comment.csv``` records user interaction in the form of comments. Each record corresponds to a single commenting event and includes the associated user, live room, streamer, and timestamp.
 
 | Field Name         | Description                               | Type  | Example |
 | ------------------ | ----------------------------------------- | ----- | ------- |
@@ -115,7 +115,7 @@ The file ```comment.csv``` records user interaction in the form of comments. Eac
 
 #### 5. Descriptions of the fields in gift.csv
 
-The file ```gift.csv``` records user interactions in the form of sending gifts. Each entry corresponds to a single gifting event and includes the associated user, live room, streamer, timestamp, and the price of the gift.
+The file ```gift.csv``` records user interactions in the form of sending gifts. Each record corresponds to a single gifting event and includes the associated user, live room, streamer, timestamp, and the price of the gift.
 
 | Field Name         | Description                               | Type  | Example |
 | ------------------ | ----------------------------------------- | ----- | ------- |
@@ -127,7 +127,7 @@ The file ```gift.csv``` records user interactions in the form of sending gifts. 
 
 #### 6. Descriptions of the fields in like.csv
 
-The file ```like.csv``` records user interaction in the form of liking. Each entry corresponds to a single liking event and includes the associated user, live room, streamer, and timestamp.
+The file ```like.csv``` records user interaction in the form of liking. Each record corresponds to a single liking event and includes the associated user, live room, streamer, and timestamp.
 
 | Field Name         | Description                               | Type  | Example |
 | ------------------ | ----------------------------------------- | ----- | ------- |
