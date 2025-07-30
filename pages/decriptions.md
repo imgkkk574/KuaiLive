@@ -21,7 +21,7 @@ File organization:
   ├── like.csv
   ├── click.csv
   ├── negative.csv
-  └── title_embeddings_pca128.npy
+  └── title_embeddings.npy
 ```
 
 #### 1. Descriptions of the fields in streamer.csv
@@ -162,6 +162,6 @@ The file ```negative.csv``` contains records of all exposures that were presente
 |   timestamp        | The timestamp when this interaction occurred. | int64   | 1746525926498 |
 
 
-#### 9. Descriptions of the fields in title_embeddings.pca128.npz
+#### 9. Descriptions of the fields in title_embeddings.npz
 
-The file ```title_embeddings.pca128.npz``` contains embeddings of live room titles, obtained by encoding the titles using the ```bge-base-zh-v1.5``` model and applying PCA for dimensionality reduction to 128 dimensions. The embeddings are indexed by ```live_name_id```.
+The file ```title_embeddings.npz``` contains embeddings of live room titles, obtained by encoding the titles using the ```bge-base-zh-v1.5``` model and applying PCA for dimensionality reduction to 128 dimensions. The embeddings are indexed by ```live_name_id```.
