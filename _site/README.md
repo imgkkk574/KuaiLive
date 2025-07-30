@@ -10,9 +10,32 @@
 On Kuaishou, users can discover and enter live rooms of interest, where they interact with streamers in real time through behaviors such as clicking, liking, commenting, following, and sending virtual gifts. 
 
 ![kuaidata](./assets/fig/kuaishou.png)
+
+<p style="font-size:15px; text-align:left;">Figure: Illustration of live streaming scenarios in Kuaishou App. 
+(a) The single-column recommendation feed, where users scroll vertically to receive a mix of short videos and live streams. 
+(b) The live streaming interface, where users can interact with the streamer through actions such as Follow, Comment, Like, and Gift. 
+(c) The two-column live streaming recommendation interface, where users scroll to browse live streams and click a thumbnail to enter a live room.</p>
+
 ## Download the data:
 
-KuaiLive has been shared at ... 
+
+KuaiLive has been shared at [https://zenodo.org/records/16565801](https://zenodo.org/records/16565801).
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16565801.svg)](https://doi.org/10.5281/zenodo.16565801)
+
+OPTION 1. Download via your browser:
+
+You can download the dataset from this [link](https://zenodo.org/records/16565801).
+
+OPTION 2: Download via the 'wget' command tool:
+
+For the KuaiLive dataset:
+
+```bash
+wget https://zenodo.org/record/16565801/files/KuaiLive.zip
+unzip KuaiLive.zip
+```
+
 
 ## Citation
 
@@ -31,3 +54,6 @@ This work is licensed under a
 [cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
 [cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
 
+## Contact
+
+If you have any questions, please feel free to contact us through [github issues](https://github.com/imgkkk574/KuaiLive/issues)
