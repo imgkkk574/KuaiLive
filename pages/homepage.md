@@ -27,7 +27,7 @@ On Kuaishou, users can discover and enter live rooms of interest, where they int
 
 Compared with other existing datasets, KuaiLive has the following advantages:
 
-- ✅ It includes the start and end times of each live room, allowing researchers to simulate realistic recommendation settings where candidate items are temporally constrained and dynamically changing.
+- ✅ It includes the start and end timestamps of each live room, allowing researchers to simulate realistic recommendation settings where candidate items are temporally constrained and dynamically changing.
 - ✅ It records multiple user behaviors (click, comment, like, gift), which can be leveraged to study multi-task learning and behavior modeling.
 - ✅ It preserves the temporal order of each interaction, supporting fine-grained analysis of user behavior trajectories.
 - ✅ It contains not only positive feedback but also negative feedback, making it suitable for Click-Through Rate (CTR) prediction.
