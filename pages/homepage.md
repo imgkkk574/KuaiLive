@@ -94,8 +94,15 @@ unzip KuaiLive.zip
 
 ## Citation
 
-If you find our dataset useful, please cite the paper: ... 
+If you find our dataset useful, please cite the paper: 
 
+```BibTex
+@article{qu2025kuailive,
+  title={KuaiLive: A Real-time Interactive Dataset for Live Streaming Recommendation},
+  author={Qu, Changle and Dai, Sunhao and Guo, ke and Zhao, Liqin and Niu, Yanan and Zhang, Xiao and Xu, Jun},
+  year={2025}
+}
+```
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
