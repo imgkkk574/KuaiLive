@@ -59,7 +59,7 @@ table {
 
 | Dataset   | #Users  | #Streamers |  #Rooms    | #Interactions | #Clicks   | #Comments | #Likes   | #Gifts   |
 |:---------:|:-------:|:----------:|:----------:|:-------------:|:---------:|:---------:|:--------:|:--------:|
-| ourdata   | 23,772  | 452,621    | 11,613,708 | 5,357,998     | 4,909,515 | 196,526   | 179,311  | 72,646   |
+| KuaiLive  | 23,772  | 452,621    | 11,613,708 | 5,357,998     | 4,909,515 | 196,526   | 179,311  | 72,646   |
 
 
 The short descriptions for each feature filed are listed as below. Please refer to this [page](./detailed_statistics.html) for more details and examples.
