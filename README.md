@@ -45,6 +45,7 @@ If you find our dataset useful, please cite the paper:
 @article{qu2025kuailive,
   title={KuaiLive: A Real-time Interactive Dataset for Live Streaming Recommendation},
   author={Qu, Changle and Dai, Sunhao and Guo, Ke and Zhao, Liqin and Niu, Yanan and Zhang, Xiao and Xu, Jun},
+  journal={arXiv preprint arXiv:2508.05633},
   year={2025}
 }
 ```
