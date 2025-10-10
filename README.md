@@ -49,7 +49,7 @@ Generate negative items for dev.csv and test.csv:
 python preneg.py
 ```
 ### 3.Place the Data
-Move the generated KuaiLive folder into the data directory of ReChorus:
+Move the generated KuaiLive folder into the data directory of [ReChorus](https://github.com/THUwangcy/ReChorus):
 ```bash
 ReChorus/data/KuaiLive/
 ```
