@@ -36,6 +36,28 @@ wget https://zenodo.org/record/16565801/files/KuaiLive.zip
 unzip KuaiLive.zip
 ```
 
+## 🚀 Quick Start
+
+### 1. Data Preprocessing
+Run the following command to perform leave-one-out splitting on the raw data:
+```bash
+python preprocess.py
+```
+### 2. Generate Negative Samples
+Generate negative items for dev.csv and test.csv:
+```bash
+python preneg.py
+```
+### 3.Place the Data
+Move the generated KuaiLive folder into the data directory of ReChorus:
+```bash
+ReChorus/data/KuaiLive/
+```
+### 4. Run the Example Model
+Take BPRMF as an example:
+```bash
+python main.py --model_name BPRMF --emb_size 64 --dataset "KuaiLive" --gpu 0 --batch_size 2048 --lr 1e-3 --l2 1e-7
+```
 
 ## Citation
 
