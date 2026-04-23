@@ -4,6 +4,7 @@
 
 **This is the first publicly available live streaming dataset that captures rich and realistic sequences of user interactions within an interactive app environment.**
 
+🎉🎉 KuaiLive has been accepted by [SIGIR2026](https://sigir2026.org/en-AU)!
 
 ## Overview
 
