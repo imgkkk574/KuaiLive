@@ -65,7 +65,7 @@ python main.py --model_name BPRMF --emb_size 64 --dataset "KuaiLive" --gpu 0 --b
 If you find our dataset useful, please cite the paper:
 
 ```BibTex
-@article{qu2025kuailive,
+@inproceedings{qu2025kuailive,
   title={KuaiLive: A Real-time Interactive Dataset for Live Streaming Recommendation},
   author={Qu, Changle and Dai, Sunhao and Guo, Ke and Zhang, Xiao and Zhao, Liqin and Wang, Shijun and Niu, Yanan and Hu, Lantao and Li, Han and Xu, Jun},
   booktitle={Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval},
