@@ -6,6 +6,8 @@
 
 🎉🎉 KuaiLive has been accepted by [SIGIR2026](https://sigir2026.org/en-AU)!
 
+📣📣 Our new live streaming dataset has been released: [KuaiLive-M3, A Multi-Modal, Multi-Domain, and Multi-Feedback Dataset for Live Streaming Recommendation](https://imgkkk574.github.io/KuaiLive-M3/).
+
 ## Overview
 
 On Kuaishou, users can discover and enter live rooms of interest, where they interact with streamers in real time through behaviors such as clicking, liking, commenting, following, and sending virtual gifts. 
